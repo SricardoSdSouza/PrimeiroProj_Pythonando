@@ -18,7 +18,7 @@ class Estoque:
         
 class Vendas:
     # herda de produtos e mais os itens específicos de vendas
-    def __init__(self, itensVendido: Produtos, vendedor, comprador, qtdoVendida, data = datetime.now()):
+    def __init__(self, itensVendido: Produtos, vendedor, comprador, qtdoVendida, data = datetime.now().strftime("%d/%m/%Y")):
         self.itensVendido = itensVendido
         self.vendedor = vendedor
         self.comprador = comprador
