@@ -16,7 +16,7 @@ class Estoque:
         self.produto = produto
         self.quantidade = quantidade
         
-class Vendas:
+class Venda:
     # herda de produtos e mais os itens específicos de vendas
     def __init__(self, itensVendido: Produtos, vendedor, comprador, qtdoVendida, data = datetime.now().strftime("%d/%m/%Y")):
         self.itensVendido = itensVendido
