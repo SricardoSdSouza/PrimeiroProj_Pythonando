@@ -35,9 +35,35 @@ class ControllerCategoria:
                     arq.writelines(i.categoria)
                     arq.writelines('\n')
 
+    def alteraCategoria(self,categoriaAlterar, categoriaAlterada):
+        x = DaoCategoria.ler()
 
-class ControllerProduto:
-    pass
+        cat = list(filter(lambda x: x.categoria == categoriaAlterar, x))
+
+        if len(cat) > 0:
+            #verificar se existe a categoria que será alterada
+            cat1 = list(filter(lambda x: x.categoria == categoriaAlterada, x))
+            if len(cat1) == 0:
+                #usando  MAP
+                x = list(map(lambda x: Categoria(categoriaAlterada)if(x.categoria == categoriaAlterar)else(x), x))
+                print('Troca realizada!!')
+            else:
+                print('A categoria que deseja alterar já existe !!')
+        else:
+            print('A categoria que deseja alterar não existe !!')
+
+        with open('categoria.txt', 'w') as arq:
+            for i in x:
+                arq.writelines(i.categoria)
+                arq.writelines('\n')
+
 
 #a = ControllerCategoria()
-#a.cadastraCategoria('Congelados')
+#a.removerCategoria('Frutas')
+#a.alteraCategoria('Frios', 'Congelados')
+#a.cadastraCategoria('Frios')
+#Frutas
+#Verduras
+#Legumes
+#Frios
+#Congelados
