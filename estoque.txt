@@ -1,1 +1,5 @@
-couve|R$1,0|Verduras|15
+Couve|1,4|Verduras|20
+Banana|2,5|Frutas|20
+Yogurte|3,2|Frios|20
+Milho|1,2|Enlatados|20
+Cenoura|1,5|Legumes|20

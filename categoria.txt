@@ -1,4 +1,6 @@
 Frutas
 Verduras
+Frios
 Legumes
-Laticinio
+Enlatados
+Congelados

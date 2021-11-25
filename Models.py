@@ -26,9 +26,9 @@ class Venda:
         self.data = data
         
 class Fornecedor:
-    def __init__(self, nome, cnpf, telefone, categoria):
+    def __init__(self, nome, cnpj, telefone, categoria):
         self.nome = nome
-        self.cnpf = cnpj
+        self.cnpj = cnpj
         self.telefone = telefone
         self.categoria = categoria
         
@@ -41,9 +41,8 @@ class Pessoa:
         self.email = email
         self.endereco = endereco
         
-def Funcionario(Pessoa):
+class Funcionario(Pessoa):
     def __init__(self, clt, nome, telefone, cpf, email, endereco):
         self.clt = clt
         # herda tudo que Pessoas + as informações de clt que são individuais
         super(Funcionario, self).__init__(nome, telefone, cpf, email, endereco)
-    
